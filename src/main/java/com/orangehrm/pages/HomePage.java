@@ -16,7 +16,7 @@ public class HomePage {
     private By adminTab = By.xpath("//span[text()='Admin']");
 
     private By userIDButton = By.className("oxd-userdropdown-name");
-    private By logoutButton = By.xpath("//a[text()='Logout']");
+    private By logoutButton = By.xpath("//a[contains(.,'Logout')]");
 
     private By oranageHRMlogo = By.xpath("//div[@class='oxd-brand-banner']//img");
 

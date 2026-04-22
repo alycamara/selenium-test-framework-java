@@ -25,7 +25,7 @@ public class LoginPage extends BaseClass {
     /**
      * Bouton de soumission du formulaire login.
      */
-    private By loginButton = By.xpath("//button[text()=' Login ']");
+    private By loginButton = By.xpath("//button[@type='submit']");
 
     private By errorMessage = By.xpath("//p[text()='Invalid credentials']");
 
