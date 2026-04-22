@@ -4,9 +4,7 @@ import com.orangehrm.base.BaseClass;
 import com.orangehrm.utilities.ExtentManager;
 import com.orangehrm.utilities.LoggerManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,7 +23,7 @@ public class ActionDriver {
         this.driver = driver;
 
         int explicitWait = Integer.parseInt(
-                BaseClass.getProp().getProperty("explicitWait", "10")
+                BaseClass.getProp().getProperty("explicitWait", "20") // 🔥 increased for Grid
         );
 
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
@@ -34,7 +32,7 @@ public class ActionDriver {
     }
 
     // =====================================================
-    // CLICK
+    // CLICK (GRID ROBUST VERSION)
     // =====================================================
     public void click(By by) {
         try {
@@ -42,10 +40,19 @@ public class ActionDriver {
                     ExpectedConditions.elementToBeClickable(by)
             );
 
-            element.click();
+            // 🔥 Scroll into view (important for Docker/Grid)
+            ((JavascriptExecutor) driver)
+                    .executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 
-            String msg = "Clicked element: " + getElementDescription(by);
+            // 🔥 Native click + fallback JS click
+            try {
+                element.click();
+            } catch (Exception e) {
+                ((JavascriptExecutor) driver)
+                        .executeScript("arguments[0].click();", element);
+            }
 
+            String msg = "Clicked element: " + by;
             logger.info(msg);
             ExtentManager.logStep(msg);
 
@@ -61,7 +68,7 @@ public class ActionDriver {
     }
 
     // =====================================================
-    // ENTER TEXT
+    // ENTER TEXT (STABLE VERSION)
     // =====================================================
     public void enterText(By by, String value) {
         try {
@@ -72,7 +79,7 @@ public class ActionDriver {
             element.clear();
             element.sendKeys(value);
 
-            String msg = "Entered text in: " + getElementDescription(by);
+            String msg = "Entered text in: " + by;
 
             logger.info(msg);
             ExtentManager.logStep(msg);
@@ -89,7 +96,7 @@ public class ActionDriver {
     }
 
     // =====================================================
-    // IS DISPLAYED
+    // IS DISPLAYED (SAFE VERSION)
     // =====================================================
     public boolean isDisplayed(By by) {
         try {
@@ -97,7 +104,7 @@ public class ActionDriver {
                     ExpectedConditions.visibilityOfElementLocated(by)
             ).isDisplayed();
 
-            String msg = "Element displayed: " + getElementDescription(by);
+            String msg = "Element displayed: " + by;
 
             logger.info(msg);
             ExtentManager.logStep(msg);
@@ -108,7 +115,7 @@ public class ActionDriver {
 
             String msg = "Element NOT displayed: " + by;
 
-            logger.error(msg, e);
+            logger.warn(msg);
             ExtentManager.logFailure(driver, msg, msg);
 
             return false;
@@ -116,7 +123,7 @@ public class ActionDriver {
     }
 
     // =====================================================
-    // GET TEXT
+    // GET TEXT (SAFE VERSION)
     // =====================================================
     public String getText(By by) {
         try {
@@ -163,37 +170,38 @@ public class ActionDriver {
     }
 
     // =====================================================
-    // ELEMENT DESCRIPTION
+    // ELEMENT DESCRIPTION (SAFE FOR GRID)
     // =====================================================
     private String getElementDescription(By locator) {
-
         try {
-            WebElement element = driver.findElement(locator);
+            WebElement element = wait.until(
+                    ExpectedConditions.presenceOfElementLocated(locator)
+            );
 
-            String id = element.getDomProperty("id");
-            String name = element.getDomProperty("name");
-            String className = element.getDomProperty("class");
-            String placeholder = element.getDomProperty("placeholder");
             String text = element.getText();
 
-            StringBuilder desc = new StringBuilder("Element: ");
-
-            if (isNotEmpty(id)) desc.append("[id=").append(id).append("] ");
-            if (isNotEmpty(name)) desc.append("[name=").append(name).append("] ");
-            if (isNotEmpty(className)) desc.append("[class=").append(className).append("] ");
-            if (isNotEmpty(placeholder)) desc.append("[placeholder=").append(placeholder).append("] ");
-            if (isNotEmpty(text)) desc.append("[text=").append(truncate(text, 40)).append("] ");
-
-            if (desc.toString().equals("Element: ")) {
-                desc.append(locator.toString());
-            }
-
-            return desc.toString();
+            return "Element: [" + locator + "]"
+                    + (isNotEmpty(text) ? " [text=" + truncate(text, 40) + "]" : "");
 
         } catch (Exception e) {
-            logger.error("Error describing element: " + locator, e);
+            logger.warn("Cannot describe element: " + locator);
             return locator.toString();
         }
+    }
+
+    // =====================================================
+    // WAIT UTILITIES (REUSABLE - NON BREAKING)
+    // =====================================================
+    public WebElement waitForVisible(By by) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
+
+    public WebElement waitForClickable(By by) {
+        return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    public WebElement waitForPresence(By by) {
+        return wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
     // =====================================================
