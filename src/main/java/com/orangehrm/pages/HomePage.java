@@ -44,7 +44,13 @@ public class HomePage {
 
     // Method to perform logout operation
     public void logout() {
+
         actionDriver.click(userIDButton);
+
+
+        actionDriver.waitForVisible(logoutButton);
+        actionDriver.waitForClickable(logoutButton);
+
         actionDriver.click(logoutButton);
     }
 

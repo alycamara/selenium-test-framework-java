@@ -27,6 +27,8 @@ public class ActionDriver {
         );
 
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
+        this.wait.pollingEvery(Duration.ofMillis(200));
+        this.wait.ignoring(StaleElementReferenceException.class);
 
         logger.info("ActionDriver initialized with wait: " + explicitWait);
     }
