@@ -15,10 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 import java.net.URL;
@@ -76,8 +73,9 @@ public class BaseClass {
     // =====================================================
 
     @BeforeMethod
-    public void setup(Method method) {
-        String browser = prop.getProperty("browser");
+    @Parameters("browser")
+    public void setup(String browser) {
+       // String browser = prop.getProperty("browser");
 
         if (browser == null || browser.trim().isEmpty()) {
             throw new IllegalArgumentException(

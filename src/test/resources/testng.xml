@@ -3,11 +3,29 @@
         <listener class-name="com.orangehrm.listeners.TestListener"/>
     </listeners>
 
-    <test name="UI Tests">
+    <test name="UI Tests chrome">
+        <parameter name="browser" value="chrome" />
         <classes>
             <class name="com.orangehrm.LoginPageTest"/>
             <class name="com.orangehrm.HomePageTest"/>
         </classes>
     </test>
+
+    <test name="UI Tests firefox">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="com.orangehrm.LoginPageTest"/>
+            <class name="com.orangehrm.HomePageTest"/>
+        </classes>
+    </test>
+
+    <!--<test name="UI Tests edge">
+        <parameter name="browser" value="edge" />
+        <classes>
+            <class name="com.orangehrm.LoginPageTest"/>
+            <class name="com.orangehrm.HomePageTest"/>
+        </classes>
+    </test>-->
+
 
 </suite>
