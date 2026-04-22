@@ -86,7 +86,7 @@
 
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.5.3</version>
                 <configuration>
                     <suiteXmlFiles>
                         <!-- Specify the location of your testng.xml file -->

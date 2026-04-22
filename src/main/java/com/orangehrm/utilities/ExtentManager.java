@@ -30,7 +30,7 @@ public class ExtentManager {
 
             String reportPath =
                     System.getProperty("user.dir")
-                            + "/src/test/resources/ExtentReport/ExtentReport.html";
+                            + "/src/test/resources/ExtentReport/mvn";
 
             ExtentSparkReporter spark =
                     new ExtentSparkReporter(reportPath);
