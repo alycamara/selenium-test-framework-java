@@ -2,7 +2,6 @@
     <listeners>
         <listener class-name="com.orangehrm.listeners.TestListener"/>
     </listeners>
-<!--    <suite name="OrangeHRM Suite">-->
 
     <test name="UI Tests">
         <classes>
