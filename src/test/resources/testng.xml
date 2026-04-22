@@ -1,0 +1,14 @@
+<suite name="OrangeHRM Suite" parallel="classes" thread-count="4">
+    <listeners>
+        <listener class-name="com.orangehrm.listeners.TestListener"/>
+    </listeners>
+<!--    <suite name="OrangeHRM Suite">-->
+
+    <test name="UI Tests">
+        <classes>
+            <class name="com.orangehrm.LoginPageTest"/>
+            <class name="com.orangehrm.HomePageTest"/>
+        </classes>
+    </test>
+
+</suite>

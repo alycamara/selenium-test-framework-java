@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+=============================================================================
+ Fichier de configuration Log4j2
+ Nom du fichier : log4j2.xml
+ Emplacement recommandé : src/main/resources/
+
+ Rôle :
+ - Gérer les logs de l'application Java / Selenium
+ - Afficher les logs dans la console
+ - Sauvegarder les logs dans des fichiers
+ - Définir le niveau des logs (INFO, DEBUG, ERROR...)
+
+ Log4j2 charge automatiquement ce fichier au démarrage.
+=============================================================================
+-->
+
+<Configuration status="WARN">
+
+    <!--
+    =====================================================================
+    APPENDERS = destinations des logs
+
+    Un appender représente l'endroit où les logs seront envoyés :
+    - Console : terminal / IntelliJ / CMD
+    - File    : fichier texte
+    - RollingFile : fichier avec rotation automatique
+    =====================================================================
+    -->
+    <Appenders>
+
+        <!--
+        ==============================================================
+        Console Appender
+
+        Affiche les logs dans la console.
+        Très utile pendant le développement et le debug local.
+        ==============================================================
+        -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+
+            <!--
+            PatternLayout = format d'affichage du log
+
+            %d       = date/heure
+            %-5level = niveau du log (INFO, ERROR...)
+            %c{1}    = nom de la classe
+            %msg     = message
+            %n       = retour ligne
+            -->
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1} - %msg%n"/>
+
+        </Console>
+
+
+        <!--
+        ==============================================================
+        File Appender
+
+        Enregistre tous les logs dans un fichier local.
+
+        Emplacement :
+        logs/application.log
+
+        Le dossier logs sera créé automatiquement si nécessaire.
+        ==============================================================
+        -->
+        <File
+                name="FileAppender"
+                fileName="logs/app.log">
+
+            <!-- Même format que la console -->
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1} - %msg%n"/>
+
+        </File>
+
+    </Appenders>
+
+
+
+    <!--
+    =====================================================================
+    LOGGERS = règles de journalisation
+
+    Permet de définir :
+    - quels niveaux de logs afficher
+    - quels appenders utiliser
+    =====================================================================
+    -->
+    <Loggers>
+
+        <!--
+        ==============================================================
+        Root Logger = logger principal de toute l'application
+
+        level="info" signifie :
+
+        TRACE : très détaillé
+        DEBUG : debug développeur
+        INFO  : informations normales
+        WARN  : avertissement
+        ERROR : erreur importante
+        FATAL : erreur critique
+
+        Ici :
+        - INFO et supérieur seront enregistrés
+        - DEBUG ne sera pas affiché
+        ==============================================================
+        -->
+        <Root level="info">
+
+            <!-- Envoi vers console -->
+            <AppenderRef ref="ConsoleAppender"/>
+
+            <!-- Envoi vers fichier -->
+            <AppenderRef ref="FileAppender"/>
+
+        </Root>
+
+    </Loggers>
+
+</Configuration>
