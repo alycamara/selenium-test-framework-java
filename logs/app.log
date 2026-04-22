@@ -9322,3 +9322,962 @@ Session ID: fa0ef0b0d1cbf25c5635a517b3a0516b
 2026-04-22 15:18:36 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
 2026-04-22 15:18:36 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
 2026-04-22 15:18:36 INFO  LoginPage - Error message text verification result: true
+2026-04-22 17:08:03 INFO  BaseClass - Loading configuration file...
+2026-04-22 17:08:03 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 17:08:05 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:08:05 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:08:05 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:08:05 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:08:05 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:08:05 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:08:06 INFO  ActionDriver - Entered text in: Element: [name=username] [placeholder=Username] 
+2026-04-22 17:08:06 INFO  ActionDriver - Entered text in: Element: [name=password] [placeholder=Password] 
+2026-04-22 17:08:07 ERROR ActionDriver - Error describing element: By.xpath: //button[@type='submit']
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [11f41b44ebc0bc9ee9d541b41752de73, findElement {using=xpath, value=//button[@type='submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11f41b44ebc0bc9ee9d541b41752de73
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:171)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.LoginPage.login(LoginPage.java:53)
+	at com.orangehrm.LoginPageTest.loginWithValidCredentials(LoginPageTest.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:08:07 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:08:07 INFO  LoginPage - Login button clicked.
+2026-04-22 17:08:07 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 17:08:08 INFO  ActionDriver - Element displayed: Element: [text=Admin] 
+2026-04-22 17:08:08 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 17:08:08 INFO  ActionDriver - Clicked element: Element: [text=robin van persie] 
+2026-04-22 17:08:09 ERROR ActionDriver - Error describing element: By.xpath: //a[contains(.,'Logout')]
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(.,'Logout')]"}
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [11f41b44ebc0bc9ee9d541b41752de73, findElement {using=xpath, value=//a[contains(.,'Logout')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11f41b44ebc0bc9ee9d541b41752de73
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:171)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.HomePage.logout(HomePage.java:48)
+	at com.orangehrm.LoginPageTest.loginWithValidCredentials(LoginPageTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:08:09 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:08:10 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:08:10 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:08:10 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:08:10 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:08:10 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:08:10 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:08:11 INFO  ActionDriver - Entered text in: Element: [name=username] [placeholder=Username] 
+2026-04-22 17:08:11 INFO  ActionDriver - Entered text in: Element: [name=password] [placeholder=Password] 
+2026-04-22 17:08:12 ERROR ActionDriver - Error describing element: By.xpath: //button[@type='submit']
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d2de3cc5af409777295145aa8d972dcc, findElement {using=xpath, value=//button[@type='submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45601}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d2de3cc5af409777295145aa8d972dcc
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:171)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.LoginPage.login(LoginPage.java:53)
+	at com.orangehrm.HomePageTest.verifyOrangeHRMLogo(HomePageTest.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:08:12 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:08:12 INFO  LoginPage - Login button clicked.
+2026-04-22 17:08:12 INFO  ActionDriver - Element displayed: Element: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 17:08:13 INFO  ActionDriver - Clicked element: Element: [text=robin van persie] 
+2026-04-22 17:08:13 ERROR ActionDriver - Error describing element: By.xpath: //a[contains(.,'Logout')]
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(.,'Logout')]"}
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d2de3cc5af409777295145aa8d972dcc, findElement {using=xpath, value=//a[contains(.,'Logout')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45601}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d2de3cc5af409777295145aa8d972dcc
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:171)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.HomePage.logout(HomePage.java:48)
+	at com.orangehrm.HomePageTest.verifyOrangeHRMLogo(HomePageTest.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:08:13 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:08:13 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:08:14 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:08:14 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:08:14 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:08:14 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:08:14 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 17:08:15 INFO  ActionDriver - Entered text in: Element: [name=username] [placeholder=Username] 
+2026-04-22 17:08:15 INFO  ActionDriver - Entered text in: Element: [name=password] [placeholder=Password] 
+2026-04-22 17:08:16 ERROR ActionDriver - Error describing element: By.xpath: //button[@type='submit']
+org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [0d4f246e92f3a8f211b93b4a0840f5ed, getElementDomProperty {name=id, id=f.2DE3E5CE0374E3CD3863C4BC25F3FFDD.d.9628B9A02DCFA6957303911A4B5DAE16.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35067}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on linux (0d4f246e92f3a8f211b93b4a0840f5ed)] -> xpath: //button[@type='submit']]
+Session ID: 0d4f246e92f3a8f211b93b4a0840f5ed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getDomProperty(RemoteWebElement.java:139)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:173)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.LoginPage.login(LoginPage.java:53)
+	at com.orangehrm.LoginPageTest.loginWithInvalidCredentials(LoginPageTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:08:16 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:08:16 INFO  LoginPage - Login button clicked.
+2026-04-22 17:08:16 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 17:08:16 INFO  ActionDriver - Element displayed: Element: [text=Invalid credentials] 
+2026-04-22 17:08:16 INFO  LoginPage - Error message visibility result: true
+2026-04-22 17:08:16 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 17:08:16 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:08:16 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 17:08:16 INFO  LoginPage - Error message text verification result: true
+2026-04-22 17:08:46 INFO  BaseClass - Loading configuration file...
+2026-04-22 17:08:46 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 17:08:47 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:08:48 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:08:48 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:08:48 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:08:48 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:08:48 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:08:49 INFO  ActionDriver - Entered text in: Element: [name=username] [placeholder=Username] 
+2026-04-22 17:08:49 INFO  ActionDriver - Entered text in: Element: [name=password] [placeholder=Password] 
+2026-04-22 17:08:51 ERROR ActionDriver - Error describing element: By.xpath: //button[@type='submit']
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [83cfb9ac6955772a9285e319dbf02756, findElement {using=xpath, value=//button[@type='submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40601}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 83cfb9ac6955772a9285e319dbf02756
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:171)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.LoginPage.login(LoginPage.java:53)
+	at com.orangehrm.LoginPageTest.loginWithValidCredentials(LoginPageTest.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:08:51 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:08:51 INFO  LoginPage - Login button clicked.
+2026-04-22 17:08:51 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 17:08:52 INFO  ActionDriver - Element displayed: Element: [text=Admin] 
+2026-04-22 17:08:52 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 17:08:52 INFO  ActionDriver - Clicked element: Element: [text=robin van persie] 
+2026-04-22 17:08:57 ERROR ActionDriver - Error describing element: By.xpath: //a[contains(.,'Logout')]
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(.,'Logout')]"}
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [83cfb9ac6955772a9285e319dbf02756, findElement {using=xpath, value=//a[contains(.,'Logout')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40601}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 83cfb9ac6955772a9285e319dbf02756
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:171)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.HomePage.logout(HomePage.java:48)
+	at com.orangehrm.LoginPageTest.loginWithValidCredentials(LoginPageTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:08:57 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:08:57 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:08:59 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:08:59 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:08:59 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:08:59 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:08:59 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 17:09:00 INFO  ActionDriver - Entered text in: Element: [name=username] [placeholder=Username] 
+2026-04-22 17:09:00 INFO  ActionDriver - Entered text in: Element: [name=password] [placeholder=Password] 
+2026-04-22 17:09:03 ERROR ActionDriver - Error describing element: By.xpath: //button[@type='submit']
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [6ea566af989c1a3ea22c9c78f7d51b5e, findElement {using=xpath, value=//button[@type='submit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43805}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 138.0.7204.183, se:containerName: a9eb9cd2a9c8, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ea566af989c1a3ea22c9c78f7d51b5e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:53)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.orangehrm.actiondriver.ActionDriver.getElementDescription(ActionDriver.java:171)
+	at com.orangehrm.actiondriver.ActionDriver.click(ActionDriver.java:47)
+	at com.orangehrm.pages.LoginPage.login(LoginPage.java:53)
+	at com.orangehrm.LoginPageTest.loginWithInvalidCredentials(LoginPageTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2026-04-22 17:09:03 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:09:03 INFO  LoginPage - Login button clicked.
+2026-04-22 17:09:03 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 17:09:05 INFO  ActionDriver - Element displayed: Element: [text=Invalid credentials] 
+2026-04-22 17:09:05 INFO  LoginPage - Error message visibility result: true
+2026-04-22 17:09:05 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 17:09:05 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:09:05 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 17:09:05 INFO  LoginPage - Error message text verification result: true
+2026-04-22 17:14:24 INFO  BaseClass - Loading configuration file...
+2026-04-22 17:14:24 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 17:14:26 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:14:27 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:14:27 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:14:27 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:14:27 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:14:27 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:14:27 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:14:28 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:14:29 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:14:29 INFO  LoginPage - Login button clicked.
+2026-04-22 17:14:29 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 17:14:30 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 17:14:30 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 17:14:30 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 17:14:32 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:14:32 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:14:33 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:14:33 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:14:33 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:14:33 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:14:33 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 17:14:33 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:14:33 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:14:34 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:14:34 INFO  LoginPage - Login button clicked.
+2026-04-22 17:14:34 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 17:14:35 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:14:35 INFO  LoginPage - Error message visibility result: true
+2026-04-22 17:14:35 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 17:14:35 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:14:35 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 17:14:35 INFO  LoginPage - Error message text verification result: true
+2026-04-22 17:16:21 INFO  BaseClass - Loading configuration file...
+2026-04-22 17:16:21 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 17:16:22 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:16:23 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:16:23 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:16:23 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:16:23 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:16:23 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:16:24 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:16:24 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:16:24 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:16:24 INFO  LoginPage - Login button clicked.
+2026-04-22 17:16:25 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 17:16:25 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 17:16:26 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:16:27 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:16:27 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:16:27 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:16:27 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:16:27 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:16:27 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:16:28 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:16:28 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:16:28 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:16:28 INFO  LoginPage - Login button clicked.
+2026-04-22 17:16:28 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 17:16:29 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 17:16:29 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 17:16:29 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 17:16:30 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:16:31 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:16:32 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:16:32 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:16:32 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:16:32 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:16:32 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 17:16:32 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:16:32 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:16:32 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:16:32 INFO  LoginPage - Login button clicked.
+2026-04-22 17:16:32 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 17:16:33 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:16:33 INFO  LoginPage - Error message visibility result: true
+2026-04-22 17:16:33 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 17:16:33 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:16:33 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 17:16:33 INFO  LoginPage - Error message text verification result: true
+2026-04-22 17:32:56 INFO  BaseClass - Loading configuration file...
+2026-04-22 17:32:56 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 17:32:57 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:33:01 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:33:01 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:33:01 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:33:01 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:33:01 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:33:03 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:33:04 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:33:04 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:33:04 INFO  LoginPage - Login button clicked.
+2026-04-22 17:33:14 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 17:33:14 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 17:33:21 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:33:22 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:33:27 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:33:27 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:33:27 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:33:27 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:33:27 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:33:32 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:33:32 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:33:32 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:33:32 INFO  LoginPage - Login button clicked.
+2026-04-22 17:33:32 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 17:33:46 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 17:33:46 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 17:33:46 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 17:33:56 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:33:57 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:34:00 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:34:00 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:34:00 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:34:00 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:34:00 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 17:34:02 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:34:02 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:34:02 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:34:02 INFO  LoginPage - Login button clicked.
+2026-04-22 17:34:02 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 17:34:06 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:34:06 INFO  LoginPage - Error message visibility result: true
+2026-04-22 17:34:06 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 17:34:06 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:34:06 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 17:34:06 INFO  LoginPage - Error message text verification result: true
+2026-04-22 17:42:02 INFO  BaseClass - Loading configuration file...
+2026-04-22 17:42:02 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 17:42:04 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:42:05 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:42:05 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:42:05 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:42:05 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:42:05 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:42:05 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:42:05 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:42:06 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:42:06 INFO  LoginPage - Login button clicked.
+2026-04-22 17:42:06 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 17:42:06 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 17:42:06 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 17:42:06 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 17:42:08 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:42:08 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:42:09 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:42:09 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:42:09 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:42:09 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:42:09 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 17:42:09 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:42:09 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:42:09 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:42:09 INFO  LoginPage - Login button clicked.
+2026-04-22 17:42:11 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 17:42:11 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 17:42:12 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 17:42:12 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 17:42:13 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 17:42:13 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 17:42:13 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 17:42:13 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 17:42:13 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 17:42:13 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 17:42:13 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 17:42:13 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 17:42:13 INFO  LoginPage - Login button clicked.
+2026-04-22 17:42:13 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 17:42:14 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:42:14 INFO  LoginPage - Error message visibility result: true
+2026-04-22 17:42:14 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 17:42:14 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 17:42:14 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 17:42:14 INFO  LoginPage - Error message text verification result: true
+2026-04-22 22:47:04 INFO  BaseClass - Loading configuration file...
+2026-04-22 22:47:04 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 22:47:07 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:47:07 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:47:07 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:47:07 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:47:07 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:47:07 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:47:08 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:47:08 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:47:09 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:47:09 INFO  LoginPage - Login button clicked.
+2026-04-22 22:47:09 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:47:09 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:47:09 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 22:47:10 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:47:11 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:47:11 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:47:12 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:47:12 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:47:12 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:47:12 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:47:12 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:47:12 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:47:12 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:47:13 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:47:13 INFO  LoginPage - Login button clicked.
+2026-04-22 22:47:14 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:47:14 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:47:15 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:47:15 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:47:16 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:47:16 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:47:16 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:47:16 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:47:16 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 22:47:17 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:47:17 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:47:17 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:47:17 INFO  LoginPage - Login button clicked.
+2026-04-22 22:47:17 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 22:47:18 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:47:18 INFO  LoginPage - Error message visibility result: true
+2026-04-22 22:47:18 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 22:47:18 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:47:18 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 22:47:18 INFO  LoginPage - Error message text verification result: true
+2026-04-22 22:52:07 INFO  BaseClass - Loading configuration file...
+2026-04-22 22:52:07 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 22:52:09 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:52:09 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:52:09 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:52:09 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:52:09 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:52:10 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:52:10 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:52:10 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:52:11 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:52:11 INFO  LoginPage - Login button clicked.
+2026-04-22 22:52:11 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:52:11 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:52:11 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 22:52:12 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:52:13 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:52:13 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:52:14 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:52:14 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:52:14 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:52:14 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:52:14 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:52:14 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:52:14 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:52:15 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:52:15 INFO  LoginPage - Login button clicked.
+2026-04-22 22:52:16 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:52:16 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:52:17 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:52:17 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:52:18 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:52:18 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:52:18 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:52:18 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:52:18 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 22:52:18 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:52:19 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:52:19 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:52:19 INFO  LoginPage - Login button clicked.
+2026-04-22 22:52:19 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 22:52:19 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:52:19 INFO  LoginPage - Error message visibility result: true
+2026-04-22 22:52:19 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 22:52:20 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:52:20 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 22:52:20 INFO  LoginPage - Error message text verification result: true
+2026-04-22 22:52:22 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:52:24 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:52:24 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:52:24 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:52:24 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:52:24 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:52:24 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:52:24 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:52:25 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:52:25 INFO  LoginPage - Login button clicked.
+2026-04-22 22:52:26 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:52:26 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:52:27 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:52:29 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:52:30 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:52:30 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:52:30 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:52:30 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:52:30 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:52:30 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:52:30 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:52:31 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:52:31 INFO  LoginPage - Login button clicked.
+2026-04-22 22:52:31 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:52:32 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:52:32 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 22:52:32 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:52:33 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:52:35 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:52:36 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:52:36 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:52:36 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:52:36 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:52:36 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 22:52:37 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:52:37 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:52:37 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:52:37 INFO  LoginPage - Login button clicked.
+2026-04-22 22:52:37 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 22:52:38 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:52:38 INFO  LoginPage - Error message visibility result: true
+2026-04-22 22:52:38 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 22:52:38 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:52:38 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 22:52:38 INFO  LoginPage - Error message text verification result: true
+2026-04-22 22:52:40 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:52:41 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:52:41 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:52:41 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:52:41 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:52:41 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:52:41 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:52:41 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:52:42 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:52:42 INFO  LoginPage - Login button clicked.
+2026-04-22 22:53:13 WARN  ActionDriver - Element NOT displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:53:13 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:53:14 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:53:14 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:53:14 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:53:14 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:53:14 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:53:14 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:53:14 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:53:15 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:53:15 INFO  LoginPage - Login button clicked.
+2026-04-22 22:53:15 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:53:46 WARN  ActionDriver - Element NOT displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:53:46 INFO  HomePage - Admin tab visibility result: false
+2026-04-22 22:53:46 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:53:47 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:53:47 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:53:47 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:53:47 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:53:47 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:53:47 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:53:47 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:53:48 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:53:48 INFO  LoginPage - Login button clicked.
+2026-04-22 22:54:18 WARN  ActionDriver - Element NOT displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:54:18 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:54:19 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:54:19 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:54:19 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:54:19 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:54:19 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:54:19 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:54:20 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:54:21 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:54:21 INFO  LoginPage - Login button clicked.
+2026-04-22 22:54:21 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:54:51 WARN  ActionDriver - Element NOT displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:54:51 INFO  HomePage - Admin tab visibility result: false
+2026-04-22 22:54:51 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:54:52 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:54:52 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:54:52 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:54:52 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:54:52 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:54:52 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:54:52 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:54:53 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:54:53 INFO  LoginPage - Login button clicked.
+2026-04-22 22:55:23 WARN  ActionDriver - Element NOT displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:55:23 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:55:24 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:55:24 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:55:24 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:55:24 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:55:24 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:55:25 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:55:25 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:55:26 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:55:26 INFO  LoginPage - Login button clicked.
+2026-04-22 22:55:26 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:55:56 WARN  ActionDriver - Element NOT displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:55:56 INFO  HomePage - Admin tab visibility result: false
+2026-04-22 22:55:57 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:55:58 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:55:58 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:55:58 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:55:58 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:55:58 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 22:55:58 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:55:58 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:55:58 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:55:58 INFO  LoginPage - Login button clicked.
+2026-04-22 22:55:58 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 22:55:59 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:55:59 INFO  LoginPage - Error message visibility result: true
+2026-04-22 22:55:59 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 22:55:59 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:55:59 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 22:55:59 INFO  LoginPage - Error message text verification result: true
+2026-04-22 22:56:22 INFO  BaseClass - Loading configuration file...
+2026-04-22 22:56:22 INFO  BaseClass - Framework initialized successfully.
+2026-04-22 22:56:23 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:56:24 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:56:24 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:56:24 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:56:24 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:56:24 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:56:25 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:56:25 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:56:25 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:56:25 INFO  LoginPage - Login button clicked.
+2026-04-22 22:56:25 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:56:26 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:56:26 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 22:56:26 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:56:27 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:56:28 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:56:29 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:56:29 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:56:29 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:56:29 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:56:29 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:56:29 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:56:29 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:56:30 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:56:30 INFO  LoginPage - Login button clicked.
+2026-04-22 22:56:31 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:56:31 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:56:32 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:56:32 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:56:33 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:56:33 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:56:33 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:56:33 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:56:33 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 22:56:34 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:56:34 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:56:34 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:56:34 INFO  LoginPage - Login button clicked.
+2026-04-22 22:56:34 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 22:56:35 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:56:35 INFO  LoginPage - Error message visibility result: true
+2026-04-22 22:56:35 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 22:56:35 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:56:35 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 22:56:35 INFO  LoginPage - Error message text verification result: true
+2026-04-22 22:56:37 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:56:38 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:56:38 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:56:38 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:56:38 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:56:38 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:56:38 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:56:38 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:56:40 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:56:40 INFO  LoginPage - Login button clicked.
+2026-04-22 22:56:40 INFO  ActionDriver - Element displayed: By.xpath: //div[@class='oxd-brand-banner']//img
+2026-04-22 22:56:40 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:56:41 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:56:44 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:56:45 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:56:45 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:56:45 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:56:45 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:56:45 INFO  LoginPage - Starting login action with user: Admin
+2026-04-22 22:56:45 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:56:45 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:56:46 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:56:46 INFO  LoginPage - Login button clicked.
+2026-04-22 22:56:46 INFO  HomePage - Checking visibility of Admin tab.
+2026-04-22 22:56:47 INFO  ActionDriver - Element displayed: By.xpath: //span[text()='Admin']
+2026-04-22 22:56:47 INFO  HomePage - Admin tab visibility result: true
+2026-04-22 22:56:47 INFO  ActionDriver - Clicked element: By.className: oxd-userdropdown-name
+2026-04-22 22:56:48 INFO  ActionDriver - Clicked element: By.xpath: //a[contains(.,'Logout')]
+2026-04-22 22:56:50 INFO  BaseClass - RemoteWebDriver created (Grid)
+2026-04-22 22:56:51 INFO  BaseClass - Navigated to URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-04-22 22:56:51 INFO  ActionDriver - ActionDriver initialized with wait: 30
+2026-04-22 22:56:51 INFO  LoginPage - LoginPage initialized successfully.
+2026-04-22 22:56:51 INFO  HomePage - HomePage initialized successfully.
+2026-04-22 22:56:51 INFO  LoginPage - Starting login action with user: toto
+2026-04-22 22:56:52 INFO  ActionDriver - Entered text in: By.name: username
+2026-04-22 22:56:52 INFO  ActionDriver - Entered text in: By.cssSelector: input[type='password']
+2026-04-22 22:56:52 INFO  ActionDriver - Clicked element: By.xpath: //button[@type='submit']
+2026-04-22 22:56:52 INFO  LoginPage - Login button clicked.
+2026-04-22 22:56:52 INFO  LoginPage - Checking if error message is displayed.
+2026-04-22 22:56:53 INFO  ActionDriver - Element displayed: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:56:53 INFO  LoginPage - Error message visibility result: true
+2026-04-22 22:56:53 INFO  LoginPage - Verifying error message text. Expected: Invalid credentials
+2026-04-22 22:56:53 INFO  ActionDriver - Text retrieved from: By.xpath: //p[text()='Invalid credentials']
+2026-04-22 22:56:53 INFO  ActionDriver - MATCH: Compare Text - Expected: Invalid credentials | Actual: Invalid credentials
+2026-04-22 22:56:53 INFO  LoginPage - Error message text verification result: true
