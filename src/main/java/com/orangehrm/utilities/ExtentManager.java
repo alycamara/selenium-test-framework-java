@@ -1,7 +1,6 @@
 package com.orangehrm.utilities;
 
 import java.io.File;
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -28,9 +27,14 @@ public class ExtentManager {
 
         if (extent == null) {
 
-            String reportPath =
+            String reportDir =
                     System.getProperty("user.dir")
-                            + "/src/test/resources/ExtentReport/mvn";
+                            + "/target/ExtentReport";
+
+            String reportPath =
+                    reportDir + "/ExtentReport.html";
+
+            createDirectory(reportDir);
 
             ExtentSparkReporter spark =
                     new ExtentSparkReporter(reportPath);
@@ -38,6 +42,7 @@ public class ExtentManager {
             spark.config().setTheme(Theme.DARK);
             spark.config().setDocumentTitle("Automation Report");
             spark.config().setReportName("OrangeHRM Framework");
+            spark.config().setTimeStampFormat("dd/MM/yyyy HH:mm:ss");
 
             extent = new ExtentReports();
             extent.attachReporter(spark);
@@ -54,6 +59,7 @@ public class ExtentManager {
     // START TEST
     // =====================================================
     public static void startTest(String testName) {
+
         ExtentTest extentTest =
                 getReporter().createTest(testName);
 
@@ -69,8 +75,7 @@ public class ExtentManager {
 
         if (t == null) {
             throw new IllegalStateException(
-                    "ExtentTest is NOT initialized for this thread. " +
-                            "Ensure startTest() is called before logging.");
+                    "ExtentTest is NOT initialized for this thread.");
         }
 
         return t;
@@ -112,26 +117,41 @@ public class ExtentManager {
             WebDriver driver,
             String name) {
 
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File src = ts.getScreenshotAs(OutputType.FILE);
-
-        String timestamp =
-                LocalDateTime.now()
-                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
-
-        String path = System.getProperty("user.dir")
-                + "/src/test/resources/screenshots/"
-                + name + "_" + timestamp + ".png";
-
-        File dest = new File(path);
-
         try {
-            FileUtils.copyFile(src, dest);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        return src.getAbsolutePath();
+            String screenshotDir =
+                    System.getProperty("user.dir")
+                            + "/target/ExtentReport/screenshots";
+
+            createDirectory(screenshotDir);
+
+            String timestamp =
+                    LocalDateTime.now()
+                            .format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
+
+            String fileName =
+                    sanitizeFileName(name)
+                            + "_"
+                            + timestamp
+                            + ".png";
+
+            File src =
+                    ((TakesScreenshot) driver)
+                            .getScreenshotAs(OutputType.FILE);
+
+            File dest =
+                    new File(screenshotDir + "/" + fileName);
+
+            FileUtils.copyFile(src, dest);
+
+            // relative path for Extent report
+            return "screenshots/" + fileName;
+
+        } catch (Exception e) {
+
+            getTest().warning("Screenshot capture failed: " + e.getMessage());
+            return null;
+        }
     }
 
     // =====================================================
@@ -142,17 +162,45 @@ public class ExtentManager {
             String message) {
 
         try {
-            String path = takeScreenshot(driver, getTest().getModel().getName());
 
-            getTest().info(
-                    message,
-                    MediaEntityBuilder
-                            .createScreenCaptureFromPath(path)
-                            .build()
-            );
+            String path =
+                    takeScreenshot(
+                            driver,
+                            getTest().getModel().getName()
+                    );
+
+            if (path != null) {
+
+                getTest().info(
+                        message,
+                        MediaEntityBuilder
+                                .createScreenCaptureFromPath(path)
+                                .build()
+                );
+            }
 
         } catch (Exception e) {
+
             getTest().fail("Screenshot failed: " + e.getMessage());
+        }
+    }
+
+    // =====================================================
+    // Convert screenshot to Base64 format
+    // =====================================================
+    public static String convertToBase64(File screenShotFile) {
+
+        try {
+            byte[] fileContent =
+                    FileUtils.readFileToByteArray(screenShotFile);
+
+            return java.util.Base64
+                    .getEncoder()
+                    .encodeToString(fileContent);
+
+        } catch (Exception e) {
+
+            return "";
         }
     }
 
@@ -164,5 +212,24 @@ public class ExtentManager {
         if (extent != null) {
             extent.flush();
         }
+
+        test.remove();
+    }
+
+    // =====================================================
+    // HELPERS
+    // =====================================================
+    private static void createDirectory(String path) {
+
+        File folder = new File(path);
+
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+    }
+
+    private static String sanitizeFileName(String value) {
+
+        return value.replaceAll("[^a-zA-Z0-9-_]", "_");
     }
 }

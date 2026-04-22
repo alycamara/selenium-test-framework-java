@@ -8,15 +8,20 @@ import com.orangehrm.utilities.LoggerManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
+import java.net.URL;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -61,7 +66,7 @@ public class BaseClass {
                     "Configuration file could not be loaded.");
         }
 
-       // ExtentManager.getReporter(); --This has been implemented in TestListener
+        // ExtentManager.getReporter(); --This has been implemented in TestListener
 
         logger.info("Framework initialized successfully.");
     }
@@ -72,14 +77,6 @@ public class BaseClass {
 
     @BeforeMethod
     public void setup(Method method) {
-
-        String testName = method.getName();
-
-        logger.info("Starting test: {}", testName);
-
-        // Start Extent Test
-        ExtentManager.startTest(testName);
-
         String browser = prop.getProperty("browser");
 
         if (browser == null || browser.trim().isEmpty()) {
@@ -93,8 +90,6 @@ public class BaseClass {
         // Initialize ActionDriver for current thread
         actionDriver.set(new ActionDriver(getDriver()));
 
-
-        logger.info("Test setup completed: {}", testName);
     }
 
     // =====================================================
@@ -123,30 +118,24 @@ public class BaseClass {
 
     private void launchBrowser(String browser) {
 
-        switch (browser.toLowerCase()) {
+        boolean seleniumGrid = Boolean.parseBoolean(prop.getProperty("seleniumGrid"));
+        String gridURL = prop.getProperty("gridURL");
 
-            case "chrome":
-                driver.set(new ChromeDriver());
-                logger.info("Chrome browser launched.");
-                break;
+        try {
 
-            case "firefox":
-                driver.set(new FirefoxDriver());
-                logger.info("Firefox browser launched.");
-                break;
+            if (seleniumGrid) {
+                driver.set(createRemoteDriver(browser, gridURL));
+                logger.info("RemoteWebDriver created (Grid)");
+            } else {
+                driver.set(createLocalDriver(browser));
+                logger.info("Local WebDriver created");
+            }
 
-            case "edge":
-                driver.set(new EdgeDriver());
-                logger.info("Edge browser launched.");
-                break;
+            // ExtentManager.registerDriver(getDriver());
 
-            default:
-                throw new IllegalArgumentException(
-                        "Unsupported browser: " + browser);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to launch browser: " + browser, e);
         }
-
-        // Register driver for screenshots
-       // ExtentManager.registerDriver(getDriver());
     }
 
     // =====================================================
@@ -208,6 +197,77 @@ public class BaseClass {
         }
 
         return currentActionDriver;
+    }
+
+    private WebDriver createRemoteDriver(String browser, String gridURL) throws Exception {
+
+        if (browser.equalsIgnoreCase("chrome")) {
+
+            ChromeOptions options = getChromeOptions();
+            return new RemoteWebDriver(new URL(gridURL), options);
+
+        } else if (browser.equalsIgnoreCase("firefox")) {
+
+            FirefoxOptions options = getFirefoxOptions();
+            return new RemoteWebDriver(new URL(gridURL), options);
+
+        } else if (browser.equalsIgnoreCase("edge")) {
+
+            EdgeOptions options = getEdgeOptions();
+            return new RemoteWebDriver(new URL(gridURL), options);
+        }
+
+        throw new IllegalArgumentException("Browser Not Supported: " + browser);
+    }
+
+    private WebDriver createLocalDriver(String browser) {
+
+        if (browser.equalsIgnoreCase("chrome")) {
+            return new ChromeDriver(getChromeOptions());
+        }
+
+        if (browser.equalsIgnoreCase("firefox")) {
+            return new FirefoxDriver(getFirefoxOptions());
+        }
+
+        if (browser.equalsIgnoreCase("edge")) {
+            return new EdgeDriver(getEdgeOptions());
+        }
+
+        throw new IllegalArgumentException("Browser Not Supported: " + browser);
+    }
+
+    private ChromeOptions getChromeOptions() {
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--window-size=1920,1080");
+
+        return options;
+    }
+
+    private FirefoxOptions getFirefoxOptions() {
+
+        FirefoxOptions options = new FirefoxOptions();
+        options.addArguments("--headless");
+        options.addArguments("--width=1920");
+        options.addArguments("--height=1080");
+
+        return options;
+    }
+
+    private EdgeOptions getEdgeOptions() {
+
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+
+        return options;
     }
 
     // =====================================================
