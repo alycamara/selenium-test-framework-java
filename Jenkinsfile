@@ -24,7 +24,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Compilation et installation du projet...'
+                echo 'Compilation et installation du projet sans les test...'
                 sh 'mvn install -DskipTests'
             }
         }
