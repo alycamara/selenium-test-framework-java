@@ -49,6 +49,17 @@ pipeline {
     stages {
 
 
+
+
+        stage('System Info') {
+            steps {
+                sh 'uname -a'
+                sh 'java -version'
+                sh 'mvn -version'
+            }
+        }
+
+
         /*
          * Étape 1 : Récupération du code source
          * depuis le repository GitHub.
@@ -81,11 +92,11 @@ pipeline {
             steps {
 
                 /*
-                 * Commande Windows.
-                 * Si Jenkins Linux :
-                 * sh 'mvn clean'
+                 * Commande Linux.
+                 * Si Jenkins Windows, utiliser la commande suivante :
+                 * bat 'mvn clean'
                  */
-                bat 'mvn clean install -DskipTests'
+                sh 'mvn clean install -DskipTests'
             }
         }
 
@@ -107,7 +118,7 @@ pipeline {
                  * Lance tous les tests définis
                  * dans le pom.xml / testng.xml
                  */
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
 
