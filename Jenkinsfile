@@ -23,7 +23,7 @@ pipeline {
         maven 'maven-3.9.10'
 
         // Utilisation du JDK Java 17
-        jdk 'JDK17'
+       // jdk 'JDK17'
     }
 
 
